@@ -8,8 +8,13 @@
 ############################
 # --- Required options --- #
 ############################
+
+## ADDED
 future: true
 published: true
+
+include: ["_pages"]
+permalink: /:categories/:title/
 
 # Name of website
 title: NQA.blog
@@ -22,11 +27,11 @@ author: Nguyen Quoc Anh
 ###############################################
 
 navbar-links:
-  About Me: "I love AI and data science stuff"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+  About Me: "/aboutme/"
+  # Resources:
+  #   - Beautiful Jekyll: "https://beautifuljekyll.com"
+  #   - Learn markdown: "https://www.markdowntutorial.com/"
+  My Links: "https://linktr.ee/anhnguyen1998x3"
 
 ################
 # --- Logo --- #
