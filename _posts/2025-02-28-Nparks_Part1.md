@@ -1,3 +1,15 @@
+---
+layout: post
+title: Zero-shot Classification of Camera Trapping Footage using Reference Embedding Clusters [Part 1]
+subtitle: For animal lovers!
+tags: [Image Classification, Video Classification]
+comments: true
+mathjax: true
+categories: [AI, Wildlife]
+author: Nguyen Quoc Anh
+date: 2025-02-28
+---
+
 # Zero-shot Classification of Camera Trapping Footage using Reference Embedding Clusters [Part 1]
 
 *A big thank you to my lovely teammates: Chong Yun Yu, Emma Chao, Gracia Goh, John Tan, Liam Wells Ayathan, Scormon Ho, Stanley Han, Max Khoo and Tay Li Si*
