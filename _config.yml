@@ -8,6 +8,8 @@
 ############################
 # --- Required options --- #
 ############################
+future: true
+published: true
 
 # Name of website
 title: NQA.blog
