@@ -216,11 +216,13 @@ gtag: G-EH2VBYDNYP
 # "repository" (make sure the repository is public), (2) Enable Issues in your repository,
 # (3) Install the Utterances app in your repository https://github.com/apps/utterances
 # See more details about the parameters below at https://utteranc.es/
-# utterances:
-#  repository: # GitHub username/repository eg. "daattali/beautiful-jekyll"
-#  issue-term: title   # Mapping between blog posts and GitHub issues
-#  theme: github-light # Utterances theme
-#  label: blog-comments # Label that will be assigned to GitHub Issues created by Utterances
+# comments:
+#   provider: utterances
+#   utterances:
+#     repository: # GitHub username/repository eg. "daattali/beautiful-jekyll"
+#     issue-term: title   # Mapping between blog posts and GitHub issues
+#     theme: github-light # Utterances theme
+#     label: blog-comments # Label that will be assigned to GitHub Issues created by Utterances
 
 # To use Staticman comments, uncomment the following section. You may leave the reCaptcha
 # section commented if you aren't using reCaptcha for spam protection.
@@ -228,7 +230,7 @@ gtag: G-EH2VBYDNYP
 # https://github.com/eduardoboucas/staticman/ and https://staticman.net/ for further
 # instructions. For any support with staticman please direct questions to staticman and
 # not to BeautifulJekyll.
-#staticman:
+# staticman:
 #  repository : # GitHub username/repository eg. "daattali/beautiful-jekyll"
 #  branch     : master # If you're not using `master` branch, then you also need to update the `branch` parameter in `staticman.yml`
 #  endpoint   : # URL of your deployment, with a trailing slash eg. "https://<your-api>/v3/entry/github/"

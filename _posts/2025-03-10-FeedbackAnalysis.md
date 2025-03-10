@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Some Playing Around with Text and Ratings Reviews Data
-subtitle: (Definitely got them all done in 1 day, guys)
+title: Uncovering Insights from App Reviews
+subtitle: Playing Around with Text Reviews and Ratings
 tags: [Unsupervised Learning, NLP, EDA]
 comments: true
 mathjax: true
@@ -44,9 +44,9 @@ As expected, people write reviews when they are completely enraged with the app 
 
 For the purpose of this tiny project, from now on, I will only focus one app, as I doubt the reviews on 1 app would have much to do other reviews on other apps. I picked TikTok, and as all things meme-y and political, it has large counts of extreme 5 and 1 ratings, so much so its score distribution resembles the 🤙 actually.
 
-I also try to visualize if there is any trends in terms of ratings vs time. Ideally we would see that as time goes on, the users would be more satisfied with the app, more excited about new features. But let's see if that assumption holds
+I also tried to visualize if there was any trends in terms of ratings vs time. Ideally we would see that as time goes on, the users would be more satisfied with the app, more excited about new features. But let's see if that assumption holds
 
-Since we don't have the time uploaded of the review, we'd use sorted version names as a proxy for time. First I plot the scores against the versions, with the number of thumbs-ups as weights to determine the size of the dot. 
+Since we don't have the time uploaded of the review, we'd use sorted version names as a proxy for time. First I plotted the scores against the versions, with the number of thumbs-ups as weights to determine the size of the dot. 
 
 However, I forgot it was discrete scores, so it made this beautiful, but useless plot.
 
@@ -56,6 +56,7 @@ However, I forgot it was discrete scores, so it made this beautiful, but useless
 <p style="text-align: center; font-style: italic; margin-top: 10px;">
 Distribution of Scores by Version</p>
 
+So instead, I plotted 3 figures against release versions, and put them on top of each other. The distribution of scores (by percentage of total thumbs-ups counts) per version, mapped against the actual counts of the thumbs ups and reviews. This is much more what I was hoping to see.
 
 <div style="display: flex; justify-content: center; gap: 10px;">
     <img src="..\assets\img\feedbacks\big_plot.png" alt="distribution" width="100%">
@@ -63,12 +64,11 @@ Distribution of Scores by Version</p>
 <p style="text-align: center; font-style: italic; margin-top: 10px;">
 Percentage of Total Thumbs-ups Counts, per Discrete Scores, per Version (Top), Total Thumbs Up Counts per Versions (Mid), Total Reviews Counts per Version (Bottom) 
 </p>
-This is much more what I was hoping to see. I plot 3 figures against release versions, and put them on top of each other.
-The distribution of scores (by percentage of total thumbs-ups counts) per version, mapped against the actual counts of the thumbs ups and reviews.
+
 
 At a glance, we find some really intuitive things:
 - The more thumbs-ups/reviews a version got, the more controversial the version was (disagreements of scores among reviews).
-- Except for the earlier versions of the app... Where there are a lot of disagreements even with high review counts. Uhmmmm interesting, Tiktok, did u hire bots to boost your ratings?
+- Except for the earlier versions of the app... where there are a lot of disagreements even with high review counts. Uhmmmm interesting, Tiktok, did u hire bots to boost your ratings?
 
 => You can napkin-test the observation about the thumbsup/review counts vs controversiality actually. Considering the distribution of scores to be a probability distribution, how controversial a version is would be the **entropy** of the ratings. If everyone agrees that a version is, let's say, `3`, then probability distribution would be `[0,0,1,0,0]`, which would make the entropy to be `0`, minimal. But if everyone disagree equally, the prob dist would look something like `[0.2,0.2,0.2,0.2,0.2]`, making the entropy `2.32`. We can plot the entropy, review counts and TU_counts against each other.
 
