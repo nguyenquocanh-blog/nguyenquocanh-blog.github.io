@@ -1,8 +1,7 @@
-<!-- <div id="utterances-container"></div>
-<script src="https://utteranc.es/client.js"
-        repo="BatmanofZuhandArrgh/batmanofzuhandarrgh.github.io"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script> -->
+{% if site.commentbox %}
+  <div class="commentbox"></div>
+  <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+  <script>
+    commentBox('{{ site.commentbox }}');
+  </script>
+{% endif %}
