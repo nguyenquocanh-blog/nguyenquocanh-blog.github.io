@@ -84,7 +84,7 @@ social-network-links:
 #  bluesky: yourname
 #  ORCID: your ORCID ID
 #  google-scholar: your google scholar
-  discord: 'users/bestboy0711' #"invite_code" or "users/userid" or "invite/invite_code"
+  # discord: 'users/bestboy0711' #"invite_code" or "users/userid" or "invite/invite_code"
 #  kaggle: yourname
 #  hackerrank: yourname
 #  gitlab: yourname
@@ -204,13 +204,13 @@ gtag: G-EH2VBYDNYP
 ####################
 
 # To use Disqus comments, sign up to https://disqus.com and fill in your Disqus shortname (NOT the userid)
-#disqus: ""
+disqus: "nqa_blog"
 
 # To use Facebook Comments, create a Facebook app and fill in the Facebook App ID
 #fb_comment_id: ""
 
 # To use CommentBox, sign up for a Project ID on https://commentbox.io
-commentbox: "5677774589132800-proj" # Project ID, e.g. "5694267682979840-proj"
+# commentbox: "5677774589132800-proj" # Project ID, e.g. "5694267682979840-proj"
 
 # To use Utterances comments: (0) uncomment the following section, (1) fill in
 # "repository" (make sure the repository is public), (2) Enable Issues in your repository,
